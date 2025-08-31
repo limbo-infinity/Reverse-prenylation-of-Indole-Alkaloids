@@ -1,0 +1,27 @@
+! B3LYP-D3BJ def2-TZVP RIJCOSX def2/J TightSCF Grid5
+! OptTS  Freq  CPCM(water)
+
+%geom
+  Calc_Hess true      # compute Hessian at start to help with TS convergence
+  Recalc_Hess 10
+  TightOpt true
+end
+
+%scf
+  MaxIter 400
+end
+
+%output
+  Print[P_MOs] 1
+  Print[P_AtCharges] 1
+end
+
+%method
+  PopulationAnalysis Hirshfeld
+  CM5 true
+end
+
+* xyz 0 1
+# TRANSITION STATE GUESS geometry
+# Put the guessed TS coordinates here (near the saddle point)
+*

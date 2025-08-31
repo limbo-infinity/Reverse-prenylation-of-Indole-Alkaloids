@@ -1,0 +1,22 @@
+! B3LYP-D3BJ def2-TZVP RIJCOSX def2/J TightSCF TightOpt Grid5
+! Opt Freq  CPCM(water)
+
+%scf
+  MaxIter 300
+end
+
+%output
+  Print[P_MOs] 1
+  Print[P_AtCharges] 1
+end
+
+%method
+  PopulationAnalysis Hirshfeld
+  CM5 true
+end
+
+* xyz 0 1
+# REACTANT geometry
+# ...
+*
+
